@@ -1,0 +1,28 @@
+.list-group {
+  display: none;
+}
+.black-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  padding: 30px;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s;
+}
+.white-bg {
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+}
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+.none {
+  display: none;
+}

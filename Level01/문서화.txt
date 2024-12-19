@@ -1,0 +1,31 @@
+1. getElementsByClassName를 사용할때는 뒤에 [n]번째인지 확인해야함
+    - classList.add, classList.remove('클래스명') 를 사용하여 탈 부착 가능
+    - 하지만 토글바로 사용하면 더 쉬움
+    - classList.toggle 이렇게 사용함
+
+2. jQuery 스타일 변경
+    -몇 번째 클래스를 바꿀거니? 할때에는
+        -.eq(n).
+    - 스타일
+        - $ 이건 querySelector와 동일
+        - $('.hello').css('color', 'red'); 
+        - $('.hello').addClass('클래스명');
+        - $('.hello').removeClass('클래스명');
+        - $('.hello').toggleClass('클래스명');
+    - addEventListener 대신 on
+        -  $('.test-btn').on('click', function(){
+            어쩌구~
+            });
+    - ui 애니메이션
+        -   $('.test-btn').on('click', function(){
+                $('.hello').fadeOut();
+            });
+        - .hide() 는 사라지게
+        - .fadeOut() 은 서서히 사라지게
+        - .slideUp() 은 줄어들며 사라지게 만들어줍니다. 
+
+3. one-way 일방향 애니메이션 만드는 법 
+    1. 시작스타일 만들고 (class로)
+    2. 최종스타일 만들고 (class로) 
+    3. 원할 때 최종스타일로 변하라고 JS 코드짭니다
+    4. 시작스타일에 transition 추가 
