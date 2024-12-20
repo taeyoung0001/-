@@ -53,15 +53,18 @@
         let lastDigit = num % 10; // 5
         console.log(lastDigit);
 
--문자열 변환 사용
-    - 숫자를 문자열로 변환한 뒤, 문자열의 마지막 문자를 가져옴
-        let num = 12345;
-        let lastDigit = Number(String(num).slice(-1)); // 5
-        console.log(lastDigit);
+    -문자열 변환 사용
+        - 숫자를 문자열로 변환한 뒤, 문자열의 마지막 문자를 가져옴
+            let num = 12345;
+            let lastDigit = Number(String(num).slice(-1)); // 5
+            console.log(lastDigit);
 
--정수와 소수점의 구분
-    - 소수점을 제거한 뒤 끝자리를 확인
-        let num = 123.45;
-        let integerPart = Math.floor(num); // 정수 부분만 가져오기
-        let lastDigit = integerPart % 10; // 3
-        console.log(lastDigit);
+    -정수와 소수점의 구분
+        - 소수점을 제거한 뒤 끝자리를 확인
+            let num = 123.45;
+            let integerPart = Math.floor(num); // 정수 부분만 가져오기
+            let lastDigit = integerPart % 10; // 3
+            console.log(lastDigit);
+
+9. X초마다 코드를 실행하고 싶으면면
+    - setInterval(function(){ 실행할코드~ }, 기다릴시간);   
