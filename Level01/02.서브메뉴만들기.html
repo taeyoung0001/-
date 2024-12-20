@@ -33,7 +33,19 @@
     <div class="black-bg">
       <div class="white-bg">
         <h4>로그인하세요</h4>
-        <button class="btn btn-danger" id="close">닫기</button>
+
+        <form action="./succes.html">
+          <div class="my-3">
+            <input type="text" class="form-control" id="email" />
+          </div>
+          <div class="my-3">
+            <input type="password" class="form-control" id="password" />
+          </div>
+          <button type="submit" class="btn btn-primary" id="submit">
+            전송
+          </button>
+          <button type="button" class="btn btn-danger" id="close">닫기</button>
+        </form>
       </div>
     </div>
 
@@ -50,9 +62,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
     <script>
       $(".navbar-toggler").on("click", () => {
-        $(".list-group").toggleClass("show");
+        $(".list-group").toggleClass("show-list");
       });
 
       $("#open").on("click", () => {
@@ -61,6 +74,21 @@
 
       $("#close").on("click", () => {
         $(".black-bg").toggleClass("show");
+      });
+
+      $("form").on("submit", (e) => {
+        if ($("#email").val() == "") {
+          alert("이메일이 공백입니다.");
+          e.preventDefault();
+        } else if ($("#password").val() == "") {
+          alert("비밀번호가 공백입니다.");
+          e.preventDefault();
+        } else if ($("#password").val().length < 6) {
+          alert("비밀번호는 6자리 이상이여야 합니다.");
+          $("#password").val("");
+
+          e.preventDefault();
+        } else console.log("로그인 성공");
       });
     </script>
   </body>

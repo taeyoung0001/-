@@ -29,3 +29,19 @@
     2. 최종스타일 만들고 (class로) 
     3. 원할 때 최종스타일로 변하라고 JS 코드짭니다
     4. 시작스타일에 transition 추가 
+
+4. trim을 사용할 때에는 trim()로 사용함
+
+5. 제이쿼리에서는 value == "" 를 val("")로 사용함
+
+6. input에 입력된 값이 변경될 때 이벤트
+
+    document.getElementById('email').addEventListener('input', function(){
+    console.log('안녕')
+    });
+
+7. input에 입력하고 커서를 다른 곳에 찍으면 change 이벤트가 발생함
+
+    document.getElementById('email').addEventListener('change', function(){
+    console.log('안녕')
+    });

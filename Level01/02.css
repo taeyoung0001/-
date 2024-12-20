@@ -1,5 +1,7 @@
 .list-group {
   display: none;
+  opacity: 0;
+  transition: 1s all;
 }
 .black-bg {
   width: 100%;
@@ -11,7 +13,7 @@
 
   visibility: hidden;
   opacity: 0;
-  transition: all 1s;
+  transition: all 0.2s;
 }
 .white-bg {
   margin: 0 auto;
@@ -25,4 +27,8 @@
 }
 .none {
   display: none;
+}
+.show-list {
+  opacity: 1;
+  display: block;
 }
