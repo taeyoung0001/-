@@ -82,20 +82,20 @@
       });
 
       // 폼태그 제출
-      $("form").on("submit", (e) => {
-        if ($("#email").val() == "") {
-          alert("이메일이 공백입니다.");
-          e.preventDefault();
-        } else if ($("#password").val() == "") {
-          alert("비밀번호가 공백입니다.");
-          e.preventDefault();
-        } else if ($("#password").val().length < 6) {
-          alert("비밀번호는 6자리 이상이여야 합니다.");
-          $("#password").val("");
+      // $("form").on("submit", (e) => {
+      //   if ($("#email").val() == "") {
+      //     alert("이메일이 공백입니다.");
+      //     e.preventDefault();
+      //   } else if ($("#password").val() == "") {
+      //     alert("비밀번호가 공백입니다.");
+      //     e.preventDefault();
+      //   } else if ($("#password").val().length < 6) {
+      //     alert("비밀번호는 6자리 이상이여야 합니다.");
+      //     $("#password").val("");
 
-          e.preventDefault();
-        } else console.log("로그인 성공");
-      });
+      //     e.preventDefault();
+      //   } else console.log("로그인 성공");
+      // });
 
       // 뱃지 클릭 횟수
       var count = 0;
@@ -114,6 +114,15 @@
         } else {
           $(".badge").html("Light");
           $(".check").removeClass("dark").addClass("light");
+        }
+      });
+
+      //이메일 정규표현식
+      $("form").on("submit", function (e) {
+        var 입력한값 = document.getElementById("email").value;
+        if (!/\S+@\S+\.\S+/.test(입력한값)) {
+          alert("이메일형식아님");
+          e.preventDefault();
         }
       });
     </script>
