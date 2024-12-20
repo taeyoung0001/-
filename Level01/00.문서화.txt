@@ -45,3 +45,23 @@
     document.getElementById('email').addEventListener('change', function(){
     console.log('안녕')
     });
+
+8. 마지막 자리 가져오는 방법
+    - 나머지 연산자 이용
+    - 10 으로 % 해서 나머지값
+        let num = 12345;
+        let lastDigit = num % 10; // 5
+        console.log(lastDigit);
+
+-문자열 변환 사용
+    - 숫자를 문자열로 변환한 뒤, 문자열의 마지막 문자를 가져옴
+        let num = 12345;
+        let lastDigit = Number(String(num).slice(-1)); // 5
+        console.log(lastDigit);
+
+-정수와 소수점의 구분
+    - 소수점을 제거한 뒤 끝자리를 확인
+        let num = 123.45;
+        let integerPart = Math.floor(num); // 정수 부분만 가져오기
+        let lastDigit = integerPart % 10; // 3
+        console.log(lastDigit);

@@ -16,6 +16,7 @@
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
         <span class="navbar-brand">Navbar</span>
+        <span class="badge bg-dark">Dark 🔄</span>
         <button class="navbar-toggler" type="button">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -50,6 +51,7 @@
     </div>
 
     <button class="modal-btn" id="open">모달창보기</button>
+    <h2 class="check">다크모드 확인하는 글씨</h2>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -64,18 +66,22 @@
     ></script>
 
     <script>
+      // 네브바토글
       $(".navbar-toggler").on("click", () => {
         $(".list-group").toggleClass("show-list");
       });
 
+      // 오픈 토글
       $("#open").on("click", () => {
         $(".black-bg").toggleClass("show");
       });
 
+      // 닫기 토글
       $("#close").on("click", () => {
         $(".black-bg").toggleClass("show");
       });
 
+      // 폼태그 제출
       $("form").on("submit", (e) => {
         if ($("#email").val() == "") {
           alert("이메일이 공백입니다.");
@@ -89,6 +95,26 @@
 
           e.preventDefault();
         } else console.log("로그인 성공");
+      });
+
+      // 뱃지 클릭 횟수
+      var count = 0;
+      $(".badge").on("click", () => {
+        //   const isEven = count % 2 === 0;
+        //   $(".badge").html(isEven ? "Light" : "Dark");
+        //   $(".check").toggleClass("dark", !isEven);
+        //   $(".check").toggleClass("light", isEven);
+        //   count = count + 1;
+        // });
+        count = count + 1;
+        if (count % 2 == 0) {
+          console.log("짝수");
+          $(".badge").html("Dark");
+          $(".check").removeClass("light").addClass("dark");
+        } else {
+          $(".badge").html("Light");
+          $(".check").removeClass("dark").addClass("light");
+        }
       });
     </script>
   </body>

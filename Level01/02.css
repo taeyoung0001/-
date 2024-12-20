@@ -32,3 +32,9 @@
   opacity: 1;
   display: block;
 }
+.dark {
+  color: black;
+}
+.light {
+  color: pink;
+}
