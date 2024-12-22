@@ -49,15 +49,10 @@ formSelect[0].addEventListener("change", () => {
 });
 
 //객체안에 반복문 꺼내는 방법임임
-// var obj = { name: "kim", age: 20 };
-// for (var key in obj) {
-//   console.log(obj[key]);
-// }
-
-//실력향상 과제 해보기
-// 1 번
-// 이름찾기('철수'); 라고 쓰면 콘솔창에 '있어요'라는 글자가 떠야합니다.
-// 이름찾기('명수'); 라고 쓰면 콘솔창에 아무 글자도 뜨지 않아야합니다.
+var obj = { name: "kim", age: 20 };
+for (var key in obj) {
+  obj[key];
+}
 
 var 출석부 = ["흥민", "영희", "철수", "재석"];
 
@@ -71,14 +66,11 @@ const 이름찾기 = (a) => {
   console.log("없어요");
 };
 
-이름찾기("감자");
-
 const 구구단 = (a) => {
   for (let b = 1; b <= 9; b++) {
     // console.log(a * b);
   }
 };
-구구단(2);
 
 const 평균점수계산기 = (arr, b) => {
   let result = 0;
@@ -91,4 +83,13 @@ const 평균점수계산기 = (arr, b) => {
   } else console.log("ㅅㄱ");
 };
 
-평균점수계산기([2, 4, 5], 10);
+//get요청으로 받아온 데이터는 파라미터 자리 저기 data로 저장해놈놈
+const URL = "https://codingapple1.github.io/price.json";
+fetch(URL)
+  .then((res) => res.json())
+  .then((data) => {
+    document.querySelector(".col-sm-4 p").innerHTML = `가격 : ${data.price}원`;
+  })
+  .catch(() => {
+    console.log("전송 실패");
+  });

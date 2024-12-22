@@ -92,7 +92,22 @@
 
 14. 이벤트 버블링
 
-e.target은 실제 클릭한 요소 알려줌 (이벤트 발생한 곳)
-e.currentTarget은 지금 이벤트리스너가 달린 곳 알려줌 (참고로 this라고 써도 똑같음)
-e.preventDefault() 실행하면 이벤트 기본 동작을 막아줌
-e.stopPropagation() 실행하면 내 상위요소로의 이벤트 버블링을 중단해줌
+    e.target은 실제 클릭한 요소 알려줌 (이벤트 발생한 곳)
+    e.currentTarget은 지금 이벤트리스너가 달린 곳 알려줌 (참고로 this라고 써도 똑같음)
+    e.preventDefault() 실행하면 이벤트 기본 동작을 막아줌
+    e.stopPropagation() 실행하면 내 상위요소로의 이벤트 버블링을 중단해줌
+
+15. sort는 정렬을 해주는 메소드
+    가나다순 이면 아래와 같이
+    var 아레이 = ["다", "가", "나"];
+    아레이.sort((a, b) => {
+    return a.localeCompare(b);
+    });
+    console.log(아레이);
+
+16. filter는  어레이 자료에서 원하는 자료만 필터링 하고 싶을때
+    var 어레이 = [7,3,5,2,40];
+
+    var 새어레이 = 어레이.filter(function(a){
+    return a < 4
+    }); 

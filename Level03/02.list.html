@@ -14,25 +14,15 @@
   <link rel="stylesheet" href="./01.list.css" />
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <img src="https://via.placeholder.com/600" class="w-100" />
-          <h5>Card title</h5>
-          <p>가격 : 70000</p>
-        </div>
-      </div>
+      <div class="row"></div>
+      <button class="more">더보기</button>
+      <button class="price">가격순</button>
+      <button class="hangle">가나다순</button>
+      <button class="six">6만원아래</button>
+      <input class="howMuch" type="text" placeholder="필터가격쓰세요 " />
+      <button class="check">검색</button>
+      <button class="reset">새로고침</button>
     </div>
-
-    <form class="container my-5 form-group">
-      <p>상품선택</p>
-      <select id="category" class="form-select mt-2">
-        <option>모자</option>
-        <option>셔츠</option>
-      </select>
-      <select class="form-select mt-2 form-hide"></select>
-    </form>
-
-    <div id="test"></div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -45,6 +35,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="./01.list.js"></script>
+    <script src="./02.list.js"></script>
   </body>
 </html>
