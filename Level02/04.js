@@ -4,15 +4,26 @@
 // array.forEach((니가정한변수)=>{ 니가정한변수.함수붙일거 쓰셈})
 // 이러면 앞에 어레이에서 하나씩꺼내서 니가정한 변수로 대체됨
 
-for (let i = 0; i <= document.querySelectorAll(".tab-button").length; i++) {
-  document.querySelectorAll(".tab-button")[i].addEventListener("click", () => {
-    document.querySelectorAll(".tab-button").forEach((button) => {
-      button.classList.remove("orange");
-    });
-    document.querySelectorAll(".tab-content").forEach((button) => {
-      button.classList.remove("show");
-    });
-    document.querySelectorAll(".tab-button")[i].classList.add("orange");
-    document.querySelectorAll(".tab-content")[i].classList.add("show");
-  });
+// $(".list").click(function (e) {
+//   if (e.target == document.querySelectorAll(".tab-button")[0]) {
+//     탭열기(0);
+//   }
+//   if (e.target == document.querySelectorAll(".tab-button")[1]) {
+//     탭열기(1);
+//   }
+//   if (e.target == document.querySelectorAll(".tab-button")[2]) {
+//     탭열기(2);
+//   }
+// });
+
+function 탭열기(i) {
+  $(".tab-button").removeClass("orange");
+  $(".tab-button").eq(i).addClass("orange");
+  $(".tab-content").removeClass("show");
+  $(".tab-content").eq(i).addClass("show");
 }
+
+//데이터 아이디로 숨겨놓는 방법(잡기술)
+$(".list").click((e) => {
+  탭열기(e.target.dataset.id);
+});
