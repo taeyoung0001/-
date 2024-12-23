@@ -87,8 +87,13 @@
 
 
 13. 스크롤바 정리
+    현재높이
+    $(window).scroll(() => {
+    var 높이 = $(window).scrollTop();
+    console.log(높이);
+    });
 
-    문제 1. 스크롤바 100px 내리면 로고 폰트사이즈 작게 만들기
+    
 
 14. 이벤트 버블링
 
@@ -111,3 +116,8 @@
     var 새어레이 = 어레이.filter(function(a){
     return a < 4
     }); 
+
+17. 마우스 이벤트 3개
+    mousedown (어떤 요소에 마우스버튼 눌렀을 때)
+    mouseup (어떤 요소에 마우스버튼 뗐을 때)
+    mousemove (어떤 요소위에서 마우스 이동할 때)

@@ -1,0 +1,45 @@
+body {
+  background-color: grey;
+}
+/*
+.grey {
+  background: lightgrey;
+  height: 2000px;
+  margin-top: 500px;
+}
+.text {
+  float: left;
+  width: 300px;
+}
+
+/* 이미지에 position : sticky를 주시면
+1. 스크롤이 되어서 이미지가 보이는 순간
+2. viewport의 맨 위에서부터 100px 위치에서 고정이 됩니다.
+3. 그리고 부모 박스를 넘어서 스크롤 되면 이미지도 같이 사라집니다.
+4. 스크롤할 부모 박스가 필요함
+5. top좌표 속성과 함께 사용해야 제대로 보임  */
+
+.image {
+  float: right;
+  width: 400px;
+  position: sticky;
+  top: 100px;
+}
+
+.card-background {
+  height: 3000px;
+  margin-top: 800px;
+  margin-bottom: 1600px;
+}
+
+.card-box img {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+}
+.card-box {
+  position: sticky;
+  top: 400px;
+  margin-top: 200px;
+  transition: all 0.2s;
+}

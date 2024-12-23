@@ -32,7 +32,29 @@ $(".left-btn").on("click", () => {
       "transform",
       `translateX(-${(지금사진 - 1) * 100}vw)`
     );
-  } else if (지금사진 == 1) {
-    alert("첫번째 사진입니다.");
   }
 });
+
+//시각좌표
+let 시각좌표 = 0;
+let 눌렀냐 = false;
+
+$(".slide-box")
+  .eq(0)
+  .on("mousedown", (e) => {
+    시각좌표 = e.clientX;
+    눌렀냐 = true;
+  });
+
+$(".slide-box")
+  .eq(0)
+  .on("mousemove", (e) => {
+    let move = e.clientX - 시각좌표;
+    if (눌렀냐 == true) {
+      console.log(눌렀냐);
+      $(".slide-container").css("transform", `translateX(-${move}px)`);
+      console.log("시각좌표", 시각좌표);
+      눌렀냐 == false;
+      console.log(눌렀냐);
+    }
+  });

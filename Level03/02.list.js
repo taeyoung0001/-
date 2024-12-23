@@ -42,11 +42,11 @@ $(".row").on("click", ".buy", (e) => {
 
   if (!cart.includes(title)) {
     // 장바구니에 없는 상품은 추가
-    cart.push(title);
+    cart.unshift(title);
   } else {
-    // 장바구니에 이미 있는 상품은 삭제 후 맨 뒤에 추가
+    // 장바구니에 이미 있는 상품은 삭제 후 맨 뒤에 추가(수정)
     cart = cart.filter((item) => item !== title); // 해당 항목 삭제
-    cart.push(title); // 맨 뒤에 추가
+    cart.unshift(title); // 맨 뒤에 추가
   }
 
   // 로컬스토리지에 업데이트된 장바구니 저장
