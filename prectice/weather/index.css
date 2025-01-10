@@ -1,0 +1,85 @@
+body {
+  background: linear-gradient(to right, #8e44ad, #9b59b6, #f39c12);
+}
+
+.mycontainer {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  height: 100vh;
+  background-color: transparent;
+}
+
+.mycontainer .weatherContainer {
+  border-radius: 20px;
+  width: 500px;
+  background-color: transparent;
+}
+.mycontainer .weatherContainer h2 {
+  text-align: center;
+  padding: 10px 0;
+  color: white;
+}
+.mycontainer .weatherContainer .T1HWrap {
+  background: linear-gradient(to right, #5f86ad, #006699, #6f949a);
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 30px;
+  padding: 1px;
+}
+.mycontainer .weatherContainer .iconBox {
+  padding: 0 20px;
+}
+.mycontainer .weatherContainer .iconBox .PTYWrap {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 350px;
+}
+.mycontainer .weatherContainer .iconBox .PTYWrap img {
+  width: 70%;
+  height: 100%;
+  margin: 10px auto;
+  object-fit: cover;
+  object-position: center;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  animation: upDown 2s ease-in infinite;
+  display: none;
+}
+.mycontainer .weatherContainer .iconBox h4 {
+  text-align: center;
+  background: linear-gradient(to right, #1e90ff, #87ceeb, #4682b4);
+
+  width: 30%;
+  margin: 10px auto;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+#loadingMessage {
+  font-size: 18px;
+  color: gray;
+  display: block; /* 초기 상태에서 로딩 메시지는 보이지 않음 */
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-3%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(3%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
