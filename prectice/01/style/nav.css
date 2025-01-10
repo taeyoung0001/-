@@ -47,6 +47,7 @@
 .naviContainer .naviWrap.soft {
   opacity: 1;
   transform: translateY(0);
+  margin-bottom: 79px;
 }
 
 @keyframes startLoading {
