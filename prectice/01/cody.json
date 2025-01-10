@@ -32,12 +32,48 @@
     },
     {
       "zeroTemp": {
-        "recommend": {}
+        "title": "0도 입니다.",
+        "recommend": {
+          "picture": [
+            {
+              "id": 3,
+              "title": "노스페이스 롱페딩",
+              "brand": "세척나라",
+              "photo": "minus-1",
+              "price": 130000
+            },
+            {
+              "id": 4,
+              "title": "무슨 가디건",
+              "brand": "세척나라",
+              "photo": "minus-2",
+              "price": 30000
+            }
+          ]
+        }
       }
     },
     {
       "plusTemp": {
-        "recommend": {}
+        "title": "이날씨면 반팔 입으세요",
+        "recommend": {
+          "picture": [
+            {
+              "id": 6,
+              "title": "노스페이스 롱페딩",
+              "brand": "세척나라",
+              "photo": "plus-1",
+              "price": 130000
+            },
+            {
+              "id": 7,
+              "title": "무슨 가디건",
+              "brand": "세척나라",
+              "photo": "plus-2",
+              "price": 30000
+            }
+          ]
+        }
       }
     }
   ]

@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&family=Nanum+Pen+Script&display=swap");
+body {
+  font-family: "Nanum Pen Script", serif;
+  background: linear-gradient(to right, #8e44ad, #9b59b6, #f39c12);
+}
+
+.longinContainer {
+  padding-right: 40px;
+  padding-top: 40px;
+  width: 500px;
+  height: 50vh;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+
+.longinContainer .loginForm {
+  margin: 0 auto;
+  width: 50%;
+}
+.longinContainer .loginForm .account {
+  width: 100%;
+  border: 1px solid rgb(178, 145, 145);
+  border-radius: 20px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.longinContainer .loginForm .account .idWrap,
+.longinContainer .loginForm .account .pwWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+}
+.longinContainer .loginForm .account .idWrap span,
+.longinContainer .loginForm .account .pwWrap span {
+  font-size: 16px;
+  padding: 10px 10px 10px 0;
+}
+.longinContainer .loginForm .account .idWrap input,
+.longinContainer .loginForm .account .pwWrap input {
+  width: 94%;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 10px 5px;
+}
+
+.longinContainer .loginForm .buttonWrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 40px auto;
+  gap: 10px;
+  border: 1px solid rgb(106, 68, 100);
+  border-radius: 20px;
+  padding: 40px 20px;
+}
+.longinContainer .loginForm .buttonWrap button {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+.longinContainer .loginForm .buttonWrap button:hover {
+  animation: btnHover 1s ease-in-out infinite;
+}
+
+@keyframes btnHover {
+  0% {
+    background-color: rgb(227, 111, 204);
+    letter-spacing: 5px;
+  }
+  50% {
+    background-color: rgb(197, 97, 182);
+    letter-spacing: 10px;
+  }
+  100% {
+    background-color: rgb(143, 71, 146);
+    letter-spacing: 5px;
+  }
+}
