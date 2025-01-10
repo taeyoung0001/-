@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&family=Nanum+Pen+Script&display=swap");
+
+#nav {
+  position: relative;
+}
+
+.naviContainer {
+  font-family: "Nanum Pen Script", serif;
+  margin-top: 20px;
+  animation: startLoading 1s;
+}
+
+.naviContainer .folder-btn {
+  font-family: "Nanum Pen Script", serif;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid rgb(8, 7, 7);
+  border-radius: 20px;
+  font-size: 20px;
+  outline: none;
+}
+
+.naviContainer .naviWrap {
+  justify-self: center;
+  gap: 40px;
+  padding: 0 20px;
+  display: flex;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.naviContainer .naviWrap li {
+  list-style: none;
+}
+
+.naviContainer .naviWrap li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.naviContainer .naviWrap.soft {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes startLoading {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

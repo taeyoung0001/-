@@ -40,7 +40,6 @@ navigator.geolocation.getCurrentPosition((position) => {
       console.log(wheatherData);
       const T1HData = wheatherData.filter((item) => item.category === "T1H");
       const PTYData = wheatherData.filter((item) => item.category === "PTY");
-      const LGTData = wheatherData.filter((item) => item.category === "LGT");
 
       console.log(PTYData);
 
@@ -48,40 +47,39 @@ navigator.geolocation.getCurrentPosition((position) => {
       //현재기온
       T1H.innerHTML = T1HData[1].fcstValue;
       console.log(PTYData[1]);
-      //   PTYData[1].fcstValue
 
-      switch (Number(4)) {
+      switch (Number(PTYData[1].fcstValue)) {
         case 0:
           PTYText.innerHTML = "비 없음";
-          imgElement.src = "./public/clouds.png";
+          imgElement.src = "../public/clouds.png";
           break;
         case 1:
           PTYText.innerHTML = "비";
-          imgElement.src = "./public/heavy-rain.png";
+          imgElement.src = "../public/heavy-rain.png";
           break;
         case 2:
           PTYText.innerHTML = "비/눈";
-          imgElement.src = "./public/sunny.png";
+          imgElement.src = "../public/sunny.png";
           break;
         case 3:
           PTYText.innerHTML = "눈";
-          imgElement.src = "./public/snow.png";
+          imgElement.src = "../public/snow.png";
           break;
         case 4:
           PTYText.innerHTML = "소나기";
-          imgElement.src = "./public/heavy-rain.png";
+          imgElement.src = "../public/heavy-rain.png";
           break;
         case 5:
           PTYText.innerHTML = "빗방울";
-          imgElement.src = "./public/heavy-rain.png";
+          imgElement.src = "../public/heavy-rain.png";
           break;
         case 6:
           PTYText.innerHTML = "빗방울/눈날림";
-          imgElement.src = "./public/snow.png";
+          imgElement.src = "../public/snow.png";
           break;
         case 7:
           PTYText.innerHTML = "눈날림";
-          imgElement.src = "./public/snow.png";
+          imgElement.src = "../public/snow.png";
           break;
       }
 

@@ -1,0 +1,44 @@
+{
+  "temp": [
+    {
+      "minusTemp": {
+        "title": "날씨가 많이 춥습니다.",
+        "recommend": {
+          "picture": [
+            {
+              "id": 0,
+              "title": "노스페이스 롱페딩",
+              "brand": "세척나라",
+              "photo": "zero-1",
+              "price": 130000
+            },
+            {
+              "id": 1,
+              "title": "무슨 가디건",
+              "brand": "세척나라",
+              "photo": "zero-2",
+              "price": 30000
+            },
+            {
+              "id": 2,
+              "title": "커버낫 패딩",
+              "brand": "세척나라",
+              "photo": "zero-3",
+              "price": 50000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "zeroTemp": {
+        "recommend": {}
+      }
+    },
+    {
+      "plusTemp": {
+        "recommend": {}
+      }
+    }
+  ]
+}
