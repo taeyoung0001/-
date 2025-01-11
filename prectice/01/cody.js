@@ -26,8 +26,10 @@ navigator.geolocation.getCurrentPosition((position) => {
     .then((response) => response.json())
     .then((data) => {
       const wheatherData = data.response.body.items.item;
-      const PTYData = wheatherData.filter((item) => item.category === "PTY");
-      const value = PTYData[0].fcstValue;
+      console.log(wheatherData);
+      const T1HData = wheatherData.filter((item) => item.category === "T1H");
+      const value = T1HData[0].fcstValue;
+      console.log(value);
 
       fetch("../cody.json")
         .then((res) => {
@@ -61,13 +63,12 @@ navigator.geolocation.getCurrentPosition((position) => {
 
           // 카드 생성
           if (clothing && clothing.length > 0) {
-            card.innerHTML = clothing
-              .map(
-                (item) => `
+            card.innerHTML = clothing.map(
+              (item) => `
                 <div class="card">
                   <img src="../public/cody/${item.photo}.png" alt="${
-                  item.title
-                }" />
+                item.title
+              }" />
                   <div class="backCard">
                     <p>상품정보</p>
                     <p class="product-title">${item.title}</p>
@@ -77,8 +78,7 @@ navigator.geolocation.getCurrentPosition((position) => {
                   </div>
                 </div>
               `
-              )
-              .join("");
+            );
           } else {
             card.innerHTML = "<p>추천 의류를 찾을 수 없습니다.</p>";
           }

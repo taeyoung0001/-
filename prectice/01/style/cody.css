@@ -5,6 +5,9 @@ body {
 }
 
 .titleBox {
+  width: 1280px;
+  max-width: 1280px;
+  margin: 0 auto;
   text-align: center;
   font-family: "Nanum Pen Script", serif;
 }
@@ -17,7 +20,9 @@ body {
 
 .recommandCloth {
   width: 100%;
-
+  width: 1280px;
+  max-width: 1280px;
+  margin: 0 auto;
   padding: 20px;
   border-radius: 20px;
   background: linear-gradient(to right, #cecdce, #9c4ebb, #e7e468);
@@ -61,6 +66,7 @@ body {
   height: 100%;
   border-radius: 20px;
 }
+
 .recommandCloth .cloth .backCard {
   width: 50%;
   padding: 20px;
@@ -70,4 +76,27 @@ body {
   height: 80%;
   background-color: rgb(204, 198, 206);
   border-radius: 10px;
+  display: none;
+  text-align: center;
+  transition: 1s ease-in-out;
+}
+.recommandCloth .cloth .cardBox .card img:hover + .backCard {
+  display: block;
+  transition: 1s ease-in-out;
+}
+
+.recommandCloth .cloth .backCard:hover {
+  display: block;
+  transition: 1s ease-in-out;
+}
+.recommandCloth .cloth .backCard .product-title {
+  font-size: 24px;
+  font-weight: 900;
+}
+.recommandCloth .cloth .backCard button {
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+  font-size: 14px;
+  margin-top: 60px;
 }
